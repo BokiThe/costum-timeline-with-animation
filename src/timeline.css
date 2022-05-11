@@ -1,0 +1,21 @@
+.timeline{
+    position:relative;
+    width: 200px;
+}
+.walk{
+    position: relative;
+    animation: walking 3s running;
+
+}
+.stop{
+    left:100%;
+}
+
+@keyframes walking {
+    from {
+       left:0%
+    }
+    to{
+        left:100%;
+    }
+}
