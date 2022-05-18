@@ -2,7 +2,9 @@ import Timeline from "./timeline";
 
 function App() {
   return (
-    <div>
+    <div
+      className="root"
+    >
       <Timeline />
     </div>
   );
