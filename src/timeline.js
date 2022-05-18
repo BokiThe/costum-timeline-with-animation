@@ -7,18 +7,25 @@ const Timeline = () => {
     const spanItem = document.getElementById("spanItem");
     spanItem.addEventListener("click", (e) => {
       e.preventDefault();
+      console.log(e.target);
       const walk = document.getElementById("walkingContainer");
       const card = document.getElementById("timelineCard");
       walk.classList.add("walk");
-      setTimeout(() => {
-        card.classList.add("cardShow");
-        walk.style.display = "none";
-      }, 2500);
-      card.addEventListener("click", () => {
+
+      if (
+        card.classList.contains("cardShow") &&
+        walk.classList.contains("walk")
+      ) {
         card.classList.remove("cardShow");
-        walk.style.display = "flex";
         walk.classList.remove("walk");
-      });
+        walk.style.display = "flex";
+      } else {
+        setTimeout(() => {
+          card.classList.add("cardShow");
+          walk.classList.add("walk");
+          walk.style.display = "none";
+        }, 2500);
+      }
     });
   }, []);
 
