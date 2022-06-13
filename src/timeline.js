@@ -7,7 +7,7 @@ const Timeline = () => {
     const spanItem = document.getElementById("spanItem");
     spanItem.addEventListener("click", (e) => {
       e.preventDefault();
-      console.log(e.target);
+
       const walk = document.getElementById("walkingContainer");
       const card = document.getElementById("timelineCard");
       walk.classList.add("walk");
@@ -24,7 +24,8 @@ const Timeline = () => {
           card.classList.add("cardShow");
           walk.classList.add("walk");
           walk.style.display = "none";
-        }, 2500);
+          console.log("dal ulazi u else samo");
+        }, 500);
       }
     });
   }, []);
