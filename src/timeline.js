@@ -29,6 +29,7 @@ const Timeline = () => {
         console.log(e.key);
       }}
     >
+      <span className="arrow" id="arrowLeft">◀</span>
       <div className="walkingContainer" id="walkingContainer">
         <img
           className="walk"
@@ -58,6 +59,7 @@ const Timeline = () => {
           </div>
         </div>
       </div>
+      <span className="arrow" id="arrowRight">▶</span>
     </div>
   );
 };
